@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="preload" as="style" onload="this.onload=null; this.rel='stylesheet'" href="./dist/style.css" />
+		<script defer src="./script.js"></script>
+		<title>
+			Frontend Mentor | Newsletter sign-up form with success message
+		</title>
+	</head>
+	<body>
+		<main class="newsletter-container" aria-labelledby="newsletter-title">
+			<picture class="card-image">
+				<!-- Image for smaller screens -->
+				<source srcset="./assets/images/illustration-sign-up-mobile.svg" media="(max-width: 767px)" />
+				<!-- Image for larger screens -->
+				<source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 768px)" />
+				<!-- Fallback image -->
+				<img
+					src="./assets/images/illustration-sign-up-desktop.svg"
+					alt="An illustrative graphic showcasing newsletter features"
+				/>
+			</picture>
+			<section class="card-content">
+				<div class="content-text">
+				<h1>Stay updated!</h1>
+				<p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+				<ul aria-label="Newsletter topics">
+					<li>Product discovery and building what matters</li>
+					<li>Measuring to ensure updates are a success</li>
+					<li>And much more!</li>
+				</ul>
+			</div>
+				<form
+					action="#"
+					method="POST"
+					aria-label="Newsletter subscription form"
+					novalidate
+				>	
+					<div class="labels-group">
+						<label for="email" class="email-label">Email address</label>
+						<div class="messages">
+							<span class="email-error">Valid email required</span>
+						</div>
+					</div>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						class="email-input"
+						placeholder="email@company.com"
+						required
+						aria-required="true"
+					/>
+					<button type="submit" class="subscribe-btn">
+						Subscribe to monthly newsletter
+					</button>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
